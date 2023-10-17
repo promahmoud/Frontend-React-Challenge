@@ -3,6 +3,7 @@ import React, { useState } from "react";
 function Form(props) {
       const [name, setName] = useState("");
       const [desc, setinputDesc] = useState("");
+      const [status, setinputstatus] = useState("");
 
       function handleChange(e) {
             setName(e.target.value);
@@ -10,11 +11,14 @@ function Form(props) {
       const handleInputdesc = (e) => {
             setinputDesc(e.target.value);
       };
+      const handleStatus = (e) => {
+            setinputstatus(e.target.value);
+      };
 
       function handleSubmit(e) {
             e.preventDefault();
             props.addTask("Say hello!");
-            props.addTask(name, desc);
+            props.addTask(name, desc, status);
             setName("");
       }
       return (
@@ -50,7 +54,13 @@ function Form(props) {
                         onChange={handleInputdesc}
                   />
                   <label for="Status">Status</label>
-                  <select className="input input__lg" id="Status" >
+                  <select 
+                  className="input input__lg" 
+                  id="Status" 
+                  name="Status"
+                  value={status}
+                  onChange={handleStatus}
+                  >
                         <option value="not_started">Not Started</option>
                         <option value="inprogress">In Progress</option>
                         <option value="Finished">Finished</option>

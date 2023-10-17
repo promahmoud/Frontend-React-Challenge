@@ -9,8 +9,8 @@ function App(props) {
   const [tasks, setTasks] = useState(props.tasks);
   const [filter, setFilter] = useState("All");
 
-  function addTask(name, desc) {
-    const newTask = { id: `todo-${nanoid()}`, name,desc, completed: false };
+  function addTask(name, desc, status) {
+    const newTask = { id: `todo-${nanoid()}`, name, desc, status, completed: false };
     setTasks([...tasks, newTask]);
   }
 
@@ -55,6 +55,7 @@ function App(props) {
       id={task.id}
       name={task.name}
       desc={task.desc}
+      status ={task.status}
       completed={task.completed}
       key={task.id}
       toggleTaskCompleted={toggleTaskCompleted}

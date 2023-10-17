@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 
 const DATA = [
-  { id: "todo-0", name: "Task1", desc:'task desc', completed: true },
-  { id: "todo-1", name: "Task2", desc:'task desc', completed: false },
+  { id: "todo-0", name: "Task1", desc:'task desc', status:'fkfk' ,completed: true },
+  { id: "todo-1", name: "Task2", desc:'task desc', status:'ffk', completed: false },
 ];
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

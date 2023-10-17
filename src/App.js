@@ -54,6 +54,7 @@ function App(props) {
     <Todo
       id={task.id}
       name={task.name}
+      desc={task.desc}
       completed={task.completed}
       key={task.id}
       toggleTaskCompleted={toggleTaskCompleted}
@@ -80,7 +81,6 @@ function App(props) {
   return (
 
     <div className="todoapp stack-large">
-      <h1>TodoMatic</h1>
       <Form addTask={addTask} />
       <div className="filters btn-group stack-exception">
         {filterList}

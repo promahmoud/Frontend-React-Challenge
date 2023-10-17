@@ -4,14 +4,18 @@ import React, { useState } from "react";
 function Todo(props) {
       const [isEditing, setEditing] = useState(false);
       const [newName, setNewName] = useState("");
+      const [newDesc, setDescrption] = useState("");
 
       function handleChange(e) {
             setNewName(e.target.value);
       }
+      function handleDescChange(e) {
+            setDescrption(e.target.value);
+      }
 
       function handleSubmit(e) {
             e.preventDefault();
-            props.editTask(props.id, newName);
+            props.editTask(props.id, newName, newDesc);
             setNewName("");
             setEditing(false);
       }
@@ -31,6 +35,17 @@ function Todo(props) {
                               onChange={handleChange}
                         />
 
+                        <label className="todo-label" htmlFor={props.id}>
+                              New name for {props.desc}
+                        </label>
+                        <input
+                              id={props.id}
+                              className="todo-text"
+                              type="text"
+                              value={newDesc}
+                              onChange={handleDescChange}
+                        />
+
                   </div>
                   <div className="btn-group">
                         <button
@@ -43,7 +58,7 @@ function Todo(props) {
 
                         <button type="submit" className="btn btn__primary todo-edit">
                               Save
-                              <span className="visually-hidden">new name for {props.name}</span>
+                              <span className="visually-hidden">new Description For {props.name}</span>
                         </button>
                   </div>
             </form>

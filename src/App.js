@@ -24,12 +24,12 @@ function App(props) {
     setTasks(updatedTasks);
   }
 
-  function editTask(id, newName) {
+  function editTask(id, newName,newDesc) {
     const editedTaskList = tasks.map((task) => {
       // if this task has the same ID as the edited task
       if (id === task.id) {
         //
-        return { ...task, name: newName };
+        return { ...task, name: newName, desc:newDesc };
       }
       return task;
     });
@@ -47,7 +47,7 @@ function App(props) {
     Active: (task) => !task.completed,
     Finished: (task) => task.completed,
   };
-
+  
   const taskList = tasks
   .filter(FILTER_MAP[filter])
   .map((task) => (
@@ -55,7 +55,7 @@ function App(props) {
       id={task.id}
       name={task.name}
       desc={task.desc}
-      status ={task.status}
+      status = {task.status}
       completed={task.completed}
       key={task.id}
       toggleTaskCompleted={toggleTaskCompleted}

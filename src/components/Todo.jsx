@@ -64,9 +64,9 @@ function Todo(props) {
                         <label className="todo-label" htmlFor={props.id}>
                               {props.desc}
                         </label>
-                        <label className="todo-label" htmlFor={props.id}>
+                        <span className={props.status} htmlFor={props.id}>
                               {props.status}
-                        </label>
+                        </span>
                   </div>
                   <div className="btn-group">
                         <button type="button" className="btn" onClick={() => setEditing(true)}>

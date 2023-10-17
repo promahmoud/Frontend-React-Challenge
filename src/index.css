@@ -309,3 +309,20 @@ body {
 .c-cb > input[type="checkbox"]:checked + label::after {
   opacity: 1;
 }
+.Finished,.inprogress,.not_started{
+
+  padding: 10px;
+  border-radius: 10px;
+}
+.Finished{
+  background: green;
+  color: #fff;
+}
+.inprogress{
+  background: #696904;
+  color: #fff;
+}
+.not_started{
+  background: #f00;
+  color: #fff;
+}

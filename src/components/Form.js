@@ -14,8 +14,7 @@ function Form(props) {
       function handleSubmit(e) {
             e.preventDefault();
             props.addTask("Say hello!");
-            props.addTask(name);
-            props.addTask(desc);
+            props.addTask(name, desc);
             setName("");
       }
       return (
@@ -50,6 +49,13 @@ function Form(props) {
                         value={desc}
                         onChange={handleInputdesc}
                   />
+                  <label for="Status">Status</label>
+                  <select className="input input__lg" id="Status" >
+                        <option value="not_started">Not Started</option>
+                        <option value="inprogress">In Progress</option>
+                        <option value="Finished">Finished</option>
+                  </select>
+                  <br/>
                   <button type="submit" className="btn btn__primary btn__lg">
                         Add
                   </button>

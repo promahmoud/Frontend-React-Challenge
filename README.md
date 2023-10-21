@@ -1,24 +1,3 @@
-#please see this code after update
-
-# Live Preview:https://todo-listwithlogin.netlify.app/
---------------------------
-
-# Github repository https://github.com/promahmoud/todo_react
-
-Coded by - [Mahmoud Mostafa]
---------------------------------
-login page:
-![](https://raw.githubusercontent.com/promahmoud/todo_react/main/login.png)
--------------
-Modal to add task:
-![](https://raw.githubusercontent.com/promahmoud/todo_react/main/addtaskmodal.png)
-------
-Main page:
-![](https://raw.githubusercontent.com/promahmoud/todo_react/main/mainpage.png)
-
-
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
